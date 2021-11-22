@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\EntreprisesController;
+use App\Http\Controllers\StageController;
+use App\Http\Controllers\ProfilController;
 
 
 /*
@@ -21,3 +23,7 @@ Route::get('/', function () {
 });
 
 Route::resource('entreprises', EntreprisesController::class);
+
+Route::resource('stage', StageController::class);
+
+Route::resource('profil', ProfilController::class);

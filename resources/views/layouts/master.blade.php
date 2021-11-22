@@ -12,7 +12,7 @@
         </head>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Menu</a>
+            <a class="navbar-brand" href="/">Menu</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -21,11 +21,18 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ route('entreprises.create') }}">Entreprises</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Stages</a>
+                 <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Stages
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Creer un stage</a>
+                        <a class="dropdown-item" href="#">Liste des stages</a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mon profil</a>
+                    <a class="nav-link" href="{{ route('profil.create') }}">Mon profil</a>
                 </li>
                 </ul>
             </div>
