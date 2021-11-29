@@ -14,7 +14,7 @@ class StageController extends Controller
      */
     public function index()
     {
-        //
+        return view('stage.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class StageController extends Controller
      */
     public function create()
     {
-        //
+        return view('stage.create');
     }
 
     /**

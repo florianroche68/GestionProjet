@@ -27,8 +27,8 @@
                         Stages
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Creer un stage</a>
-                        <a class="dropdown-item" href="#">Liste des stages</a>
+                        <a class="dropdown-item" href="{{ route('stage.create') }}">Créer un stage</a>
+                        <a class="dropdown-item" href="{{ route('stage.index') }}">Liste des stages</a>
                     </div>
                 </li>
                 <li class="nav-item">
