@@ -32,7 +32,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('profil.create') }}">Mon profil</a>
+                    <a class="nav-link" href="{{ route('profil.index') }}">Mon profil</a>
                 </li>
                 </ul>
             </div>

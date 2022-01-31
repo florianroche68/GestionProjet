@@ -18,6 +18,28 @@
   <form  action="{{ route('stage.create') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
+    <!-- Entreprises -->
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="entreprises">Entreprise:</label>
+      <select name="entreprises" id="entreprises">
+        <!-- Liste déroulante des entreprises dans la base de données --> 
+        <option value="">--Choix de l'entreprise--</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="hamster">Hamster</option>
+        <option value="parrot">Parrot</option>
+        <option value="spider">Spider</option>
+        <option value="goldfish">Goldfish</option>
+      </select>
+
+      <button type="button" class="btn btn-default btn-primary"
+        onclick="window.location='{{ route('entreprises.create') }}';">
+        <span class="glyphicon glyphicon-ok">
+          Nouvelle entreprise
+        </span>
+      </button>
+    </div>
+
     <!-- Date du début -->
     <div class="form-group">
       <label class="control-label col-sm-3" for="dateDebut">Date du début :</label>
@@ -33,20 +55,20 @@
         <input type="text" class="form-control" id="dateFin" placeholder="Saisir la date de fin du stage" name="dateFin">
       </div>
     </div>
+    
+    <!-- Année scolaire -->
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="anneeScolaire">Année scolaire :</label>  
+      <div class="col-sm-10">    
+        <input type="text" class="form-control" id="anneeScolaire" placeholder="Saisir l'année scolaire" name="anneeScolaire">
+      </div>
+    </div>
 
     <!-- Avis -->
     <div class="form-group">
       <label class="control-label col-sm-3" for="avis">Avis :</label> 
       <div class="col-sm-10">      
         <input type="text" class="form-control" id="avis" placeholder="Saisir un avis" name="avis">
-      </div>
-    </div>
-
-    <!-- Année scolaire -->
-    <div class="form-group">
-      <label class="control-label col-sm-3" for="anneeScolaire">Année scolaire :</label>  
-      <div class="col-sm-10">    
-        <input type="text" class="form-control" id="anneeScolaire" placeholder="Saisir l'année scolaire" name="anneeScolaire">
       </div>
     </div>
 
@@ -68,7 +90,7 @@
         </button>
           
         <button type="button" class="btn btn-default btn-primary"
-                onclick="javascript:if(confirm()'Vous êtes certain ?'))
+                onclick="javascript:if(confirm()'Vous êtes certain ?')
                 window.location='{{ url('/') }}';">
             <span class="glyphicon glyphicon-remove">
                 Annuler
